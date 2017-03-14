@@ -61,7 +61,9 @@ Build/*
 Saved/*
 
 # Ignore content
-Content/*
+Content/_Levels
+Content/KiteDemo
+Content/StarterContent
 
 # Compiled source files for the engine to use
 Intermediate/*
