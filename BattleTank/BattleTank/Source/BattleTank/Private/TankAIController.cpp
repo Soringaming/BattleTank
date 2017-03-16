@@ -1,4 +1,4 @@
-// Copyright (C) 2017 Jay Eggleston
+// Copyright (C) 2017 Soringaming
 
 #include "BattleTank.h"
 #include "TankAIController.h"
@@ -16,7 +16,7 @@ void ATankAIController::BeginPlay()
 	}
 	else
 	{
-		UE_LOG(LogTemp, Warning, TEXT("TankAIController is pointing at %s"), *(PlayerTank->GetName()));
+		UE_LOG(LogTemp, Warning, TEXT("TankAIController found player: %s"), *(PlayerTank->GetName()));
 	}
 
 }

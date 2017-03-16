@@ -18,9 +18,20 @@ public:
 
 private:
 
+	// Called on runtime
+	virtual void BeginPlay() override;
+
+	// Called every frame to "tick"
+	virtual void Tick( float DeltaTime ) override;
+
+	// Returns a reference to the current tank
 	ATank* GetControlledTank() const;
 
-	virtual void BeginPlay() override;
+	/*
+	Start moving the tank barrel so that a shot would hit where
+	the crosshair intersects with the world
+	*/
+	void AimTowardsCrosshair();
 	
 	
 };
