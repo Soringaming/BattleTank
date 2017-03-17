@@ -18,6 +18,12 @@ public:
 
 private:
 
+	UPROPERTY(EditAnywhere)
+	float CrossHairXLocation = 0.5;
+
+	UPROPERTY(EditAnywhere)
+	float CrossHairYLocation = 0.3333;
+
 	// Called on runtime
 	virtual void BeginPlay() override;
 
@@ -36,11 +42,6 @@ private:
 	// Return an out parameter, true if hit landscape
 	bool GetSightRayHitLocation(FVector& HitLocation) const;
 
-	UPROPERTY(EditAnywhere)
-	float CrossHairXLocation = 0.5;
-
-	UPROPERTY(EditAnywhere)
-	float CrossHairYLocation = 0.3333;
-	
+	bool GetLookDirection(FVector2D ScreenLocation, FVector& LookDirection) const;
 	
 };
